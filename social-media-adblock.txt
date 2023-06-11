@@ -36,16 +36,15 @@ www.facebook.com##[aria-posinset] [aria-label="See more groups"][href="/groups/d
 www.facebook.com##[aria-posinset] [aria-label="See more"][href="/reel/?s=ifu_see_more"]:upward([aria-posinset])
 
 ! Instagram
-instagram.com##article div:has-text(/Sponsored/i):upward(article > div)
+! instagram.com##article div:has-text(/Sponsored/i):upward(article > div)
 ! Hide "Suggested for you" posts 
-instagram.com##article > div > div > div > div:has(span:has-text(/Suggested for you/i)):upward(article)
-instagram.com##article > div > div > div > div:has(span:has-text(/Suggested for you/i)):upward(article):style(visibility: hidden !important;)
+! instagram.com##article > div > div > div > div:has(span:has-text(/Suggested for you/i)):upward(article)
+! instagram.com##article > div > div > div > div:has(span:has-text(/Suggested for you/i)):upward(article):style(visibility: hidden !important;)
 ! hide explore
 instagram.com##._ac-t
 ! 2023-06-11 https://www.instagram.com hide reel button
 www.instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xeq5yr9.x1dr59a3.xixxii4.x13vifvy.x1n327nk > div > div > div > div > div.xh8yej3.x1iyjqo2 > div:nth-child(4) > span > div > a
-www.instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xixxii4.xg7h5cd.xh8yej3.x1vjfegm.x1ey2m1c.x80663w.x1jeouym.x6w1myc > div > div > div > div > div > div:nth-child(3) > span > div > a
-m.instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xixxii4.xg7h5cd.xh8yej3.x1vjfegm.x1ey2m1c.x80663w.x1jeouym.x6w1myc > div > div > div > div > div > div:nth-child(3) > span > div > a
+instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xixxii4.xg7h5cd.xh8yej3.x1vjfegm.x1ey2m1c.x80663w.x1jeouym.x6w1myc > div > div > div > div > div > div:nth-child(3) > span > div > a
 
 !reddit
 ! www.reddit.com##[style="z-index"]
