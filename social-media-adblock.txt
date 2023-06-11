@@ -5,25 +5,18 @@
 ! This filterlist is compatible with uBlock Origin and Adguard.
 ! It is recommended to use this list in combination with both Easylist and Easyprivacy and/or the default filterlists that are configured with your adblocker.
 
+
 ! YouTube: filter out Shorts -- https://letsblock.it/filters/youtube-shorts
-www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]:upward(ytd-guide-entry-renderer)
-www.youtube.com##ytd-mini-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]:upward(ytd-mini-guide-entry-renderer)
-www.youtube.com##ytd-browse #dismissible ytd-rich-grid-slim-media[is-short]:upward(ytd-rich-section-renderer)
-www.youtube.com##ytd-browse[page-subtype="home"] .ytd-thumbnail[href^="/shorts/"]:upward(ytd-rich-item-renderer)
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] .ytd-thumbnail[href^="/shorts/"]:upward(ytd-grid-video-renderer,ytd-rich-item-renderer)
-www.youtube.com##ytd-search .ytd-thumbnail[href^="/shorts/"]:upward(ytd-video-renderer)
-www.youtube.com##ytd-watch-next-secondary-results-renderer .ytd-thumbnail[href^="/shorts/"]:upward(ytd-compact-video-renderer,ytd-shelf-renderer)
-www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-reel-shelf-renderer
-www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer .ytd-thumbnail[href^="/shorts/"]:upward(ytd-item-section-renderer)
-www.youtube.com##ytd-browse[page-subtype="channels"] #contents.ytd-reel-shelf-renderer:upward(ytd-item-section-renderer)
-www.youtube.com##ytd-browse[page-subtype="trending"] .ytd-thumbnail[href^="/shorts/"]:upward(ytd-video-renderer)
-www.youtube.com##ytd-search #contents ytd-reel-shelf-renderer
-m.youtube.com##ytm-reel-shelf-renderer
-m.youtube.com##ytm-pivot-bar-renderer div.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
-m.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-video-with-context-renderer)
-m.youtube.com##ytm-browse ytm-item-section-renderer ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-compact-video-renderer)
-m.youtube.com##ytm-search ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"]:upward(ytm-compact-video-renderer)
-m.youtube.com##ytm-single-column-watch-next-results-renderer ytm-thumbnail-overlay-time-status-renderer span:has-text(/^(0:\d\d|1:0\d)$/):upward(ytm-video-with-context-renderer)
+www.youtube.com###items.ytd-grid-renderer > ytd-grid-video-renderer.ytd-grid-renderer:has([href*="/shorts/"])
+www.youtube.com###items.yt-horizontal-list-renderer > *.yt-horizontal-list-renderer:has([href*="/shorts/"])
+www.youtube.com##ytd-rich-shelf-renderer:has([href*="/shorts/"])
+www.youtube.com##ytd-rich-item-renderer:has([href*="/shorts/"]):not([is-slim-media])
+www.youtube.com##ytd-video-renderer:has([href*="/shorts/"])
+www.youtube.com##ytd-notification-renderer:has([href*="/shorts/"])
+www.youtube.com##ytd-reel-shelf-renderer:has([href*="/shorts/"])
+www.youtube.com##[page-subtype="subscriptions"] ytd-item-section-renderer:has([href*="/shorts/"])
+
+! Remove upcoming videos
 www.youtube.com##ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
 www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
@@ -60,6 +53,11 @@ www.youtube.com##ytd-rich-grid-row:style(--ytd-rich-grid-item-margin: 4px; !impo
 www.youtube.com###contents.ytd-rich-shelf-renderer:has(#video-title.ytd-rich-grid-media):style(--ytd-rich-grid-item-margin: 4px; !important)
 www.youtube.com##ytd-thumbnail.ytd-rich-grid-media::before, ytd-playlist-thumbnail.ytd-rich-grid-media::before:style(background: none !important)
 
+! Hide profile pictures below video thumbnails on the homepage/subscriptions page
+www.youtube.com###avatar.ytd-rich-grid-media
+www.youtube.com###avatar-link.ytd-rich-grid-media
+www.youtube.com###home-page-skeleton .channel-avatar
+
 ! Dark search suggestion box in dark mode
 www.youtube.com##.sbdd_b:style(border: none !important; background: var(--yt-spec-menu-background) !important; box-shadow: 0px 4px 32px 0px var(--yt-spec-static-overlay-background-light) !important)
 www.youtube.com##.sbsb_a, .sbfl_b:style(background: none !important)
@@ -94,6 +92,37 @@ www.youtube.com##.super-title.ytd-video-primary-info-renderer:style(color: var(-
 ! Full video titles
 www.youtube.com##ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media, ytd-rich-grid-slim-media[mini-mode] #video-title.ytd-rich-grid-slim-media, ytd-video-renderer[is-backstage-video] #video-title.ytd-video-renderer, #video-title[class*="ytd"]:style(-webkit-line-clamp: 20 !important; max-height: 44rem !important)
 
+! Remove recommended movies in main screen
+youtube.com##[page-subtype="home"] .ytd-rich-shelf-renderer[title="Recommended Primetime movies"]:upward(ytd-rich-section-renderer)
+
+! Hides the Download button 
+! www.youtube.com###flexible-item-buttons.ytd-menu-renderer:not(:empty) > .ytd-menu-renderer[button-renderer]:nth-child(1)
+! Hides the Clip Button
+! www.youtube.com###flexible-item-buttons ytd-button-renderer:has([d*="M8"])
+! Hides the Thanks button
+! www.youtube.com###flexible-item-buttons ytd-button-renderer:has([d*="M11"])
+
+! Red subscribe button
+www.youtube.com##ytd-subscribe-button-renderer .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--filled, .ytp-sb-subscribe, a.ytp-sb-subscribe:style(background: #cc0000 !important; color: #ffff !important;)
+www.youtube.com##ytd-subscribe-button-renderer .yt-spec-button-shape-next--size-m.yt-spec-button-shape-next--filled:hover:style(background: #b70000 !important)
+www.youtube.com##ytd-subscribe-button-renderer:style(--yt-spec-touch-response-inverse: #fff !important; --yt-spec-static-overlay-touch-response-inverse: #fff !important)
+
+! Remove the label from the buttons Share, Download, Clip etc.
+www.youtube.com##ytd-menu-renderer:not([condensed]) #top-level-buttons-computed ytd-button-renderer:nth-child(2) .yt-spec-button-shape-next--button-text-content, #flexible-item-buttons .yt-spec-button-shape-next--button-text-content
+www.youtube.com##ytd-menu-renderer:not([condensed]) #top-level-buttons-computed ytd-button-renderer:nth-child(2),  #flexible-item-buttons .yt-spec-button-shape-next.yt-spec-button-shape-next--tonal.yt-spec-button-shape-next--mono, #flexible-item-buttons .yt-spec-button-shape-next--disabled.yt-spec-button-shape-next--tonal:style(width: 36px !important; padding: 0 !important)
+www.youtube.com##ytd-menu-renderer:not([condensed]) #top-level-buttons-computed ytd-button-renderer:nth-child(2) .yt-spec-button-shape-next__icon, #flexible-item-buttons .yt-spec-button-shape-next__icon:style( margin: 0 !important)
+
+! Hide YouTube mixes
+www.youtube.com##ytd-thumbnail #thumbnail.ytd-thumbnail[href*="start_radio=1"]:upward(.ytd-rich-item-renderer)
+www.youtube.com##ytd-compact-radio-renderer
+www.youtube.com##ytd-radio-renderer
+
+
+
+
+
+
+
 
 ! Suggested for you
 www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:first-child[class=""]>div:not([data-0]):has-text(/^Suggested/):upward([aria-posinset])
@@ -107,6 +136,10 @@ facebook.com##[aria-label="Gaming"][href="/gaming/play/?store_visit_source=gamin
 facebook.com##.xznra1h.xl56j7k.xng8ra.x1iyjqo2.x1n2onr6.x1hshjfz.x2lah0s.x78zum5.x9f619.x6s0dn4
 
 
+
+
+
+
 ! Instagram
 ! instagram.com##article div:has-text(/Sponsored/i):upward(article > div)
 ! Hide "Suggested for you" posts 
@@ -117,6 +150,12 @@ instagram.com##._ac-t
 ! 2023-06-11 https://www.instagram.com hide reel button
 www.instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xeq5yr9.x1dr59a3.xixxii4.x13vifvy.x1n327nk > div > div > div > div > div.xh8yej3.x1iyjqo2 > div:nth-child(4) > span > div > a
 instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xixxii4.xg7h5cd.xh8yej3.x1vjfegm.x1ey2m1c.x80663w.x1jeouym.x6w1myc > div > div > div > div > div > div:nth-child(3) > span > div > a
+
+
+
+
+
+
 
 !reddit
 ! www.reddit.com##[style="z-index"]
