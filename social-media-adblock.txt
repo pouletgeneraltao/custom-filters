@@ -63,11 +63,6 @@ www.youtube.com##ytd-rich-grid-row:style(--ytd-rich-grid-item-margin: 4px; !impo
 www.youtube.com###contents.ytd-rich-shelf-renderer:has(#video-title.ytd-rich-grid-media):style(--ytd-rich-grid-item-margin: 4px; !important)
 www.youtube.com##ytd-thumbnail.ytd-rich-grid-media::before, ytd-playlist-thumbnail.ytd-rich-grid-media::before:style(background: none !important)
 
-! Hide profile pictures below video thumbnails on the homepage/subscriptions page
-www.youtube.com###avatar.ytd-rich-grid-media
-www.youtube.com###avatar-link.ytd-rich-grid-media
-www.youtube.com###home-page-skeleton .channel-avatar
-
 ! Dark search suggestion box in dark mode
 www.youtube.com##.sbdd_b:style(border: none !important; background: var(--yt-spec-menu-background) !important; box-shadow: 0px 4px 32px 0px var(--yt-spec-static-overlay-background-light) !important)
 www.youtube.com##.sbsb_a, .sbfl_b:style(background: none !important)
