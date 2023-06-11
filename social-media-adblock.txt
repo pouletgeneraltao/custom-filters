@@ -101,6 +101,11 @@ www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-c
 www.facebook.com##[aria-posinset] [aria-label="See more groups"][href="/groups/discover/"]:upward([aria-posinset])
 ! Reels and short videos
 www.facebook.com##[aria-posinset] [aria-label="See more"][href="/reel/?s=ifu_see_more"]:upward([aria-posinset])
+! More facebook cleanup
+facebook.com##.x1iyjqo2 > div:nth-child(2) > ul > li:not(:has-text(/Groups/i)):not(:has-text(/Events/i)):not(:has-text(/Marketplace/i)):not(:has-text(/Friends/i))
+facebook.com##[aria-label="Gaming"][href="/gaming/play/?store_visit_source=gaming_tab"]
+facebook.com##.xznra1h.xl56j7k.xng8ra.x1iyjqo2.x1n2onr6.x1hshjfz.x2lah0s.x78zum5.x9f619.x6s0dn4
+
 
 ! Instagram
 ! instagram.com##article div:has-text(/Sponsored/i):upward(article > div)
