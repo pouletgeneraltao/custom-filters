@@ -28,6 +28,73 @@ www.youtube.com##ytd-browse ytd-grid-video-renderer:has(ytd-thumbnail-overlay-ti
 www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"])
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
 
+! More videos per row
+www.youtube.com##.ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 5 !important)
+www.youtube.com###avatar.ytd-rich-grid-media
+www.youtube.com###avatar-link.ytd-rich-grid-media
+www.youtube.com###home-page-skeleton .channel-avatar
+www.youtube.com###endorsement.ytd-video-preview
+www.youtube.com##.ytp-inline-preview-mode .ytp-paid-content-overlay
+www.youtube.com##.skeleton-bg-color.ytd-ghost-grid-renderer
+www.youtube.com##ytd-rich-item-renderer:has(ytd-ad-slot-renderer)
+www.youtube.com##[style="--ytd-rich-shelf-items-count: 4;"]:has(#video-title.ytd-rich-grid-media) #show-more-button .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text
+www.youtube.com##[style="--ytd-rich-shelf-items-count: 5;"]:has(#video-title.ytd-rich-grid-media) #show-more-button .yt-spec-button-shape-next--mono.yt-spec-button-shape-next--text
+www.youtube.com##ytd-rich-item-renderer:nth-child(4):has(#video-title.ytd-rich-grid-media)[hidden], ytd-rich-item-renderer:nth-child(5):has(#video-title.ytd-rich-grid-media)[hidden], .ytp-inline-preview-ui .ytp-subtitles-button, .ytp-inline-preview-ui .ytp-mute-button:style(display: block !important)
+www.youtube.com##.ytp-inline-preview-mode button.ytp-subtitles-button.ytp-button::after:style(margin: 0 8px !important)
+www.youtube.com###video-title.ytd-rich-grid-media:style(font-size: 1.4rem !important)
+www.youtube.com##.ytd-rich-grid-media ytd-video-meta-block[rich-meta] #byline-container.ytd-video-meta-block, .ytd-rich-grid-media ytd-video-meta-block[rich-meta] #metadata-line.ytd-video-meta-block:style(font-size: 1.2rem !important)
+www.youtube.com##[page-subtype="home"] #content.ytd-rich-section-renderer > *.ytd-rich-section-renderer, [page-subtype="sports"] #content.ytd-rich-section-renderer > *.ytd-rich-section-renderer:style(order: -1 !important; margin-top: -40px !important)
+www.youtube.com##[page-subtype="home"] .yt-core-image--content-mode-scale-aspect-fill:style(object-fit: fill !important)
+www.youtube.com##ytd-notification-multi-action-renderer[shelf-dismissal]:style(margin-top: 12px !important)
+www.youtube.com###home-page-skeleton .rich-grid-media-skeleton:style(max-width: calc(100%/5 - 8px) !important; min-width: 0px !important; margin: 0 4px 0 4px !important)
+www.youtube.com##ytd-rich-item-renderer:style(margin-bottom: 24px !important)
+www.youtube.com###contents > ytd-rich-grid-row, #contents > ytd-rich-grid-row > #contents, [page-subtype="home"] #content.ytd-rich-section-renderer, [page-subtype="home"] ytd-rich-section-renderer, [page-subtype="sports"] #content.ytd-rich-section-renderer, [page-subtype="sports"] ytd-rich-section-renderer:style(display: contents !important)
+www.youtube.com##[page-subtype="subscriptions"] #content.ytd-rich-section-renderer:style(margin: 0 8px !important)
+www.youtube.com##ytd-rich-item-renderer[is-slim-grid]:last-of-type:style(margin-right: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+www.youtube.com##ytd-rich-item-renderer[is-slim-grid]:first-of-type:style(margin-left: calc(var(--ytd-rich-grid-item-margin)/2) !important)
+www.youtube.com##[page-subtype="home"] #contents.ytd-rich-grid-renderer, [page-subtype="subscriptions"] #contents.ytd-rich-grid-renderer, [page-subtype="hashtag-landing-page"] #contents.ytd-rich-grid-renderer, [page-subtype="sports"] #contents.ytd-rich-grid-renderer:style(width: calc(100% - 3 * 1vw) !important)
+www.youtube.com##[page-subtype="home"] #dismissible.ytd-rich-shelf-renderer, [page-subtype="home"] #dismissed.ytd-rich-shelf-renderer, [page-subtype="sports"] #dismissible.ytd-rich-shelf-renderer:style(width: calc(100% - 0.2 * 1vw) !important)
+www.youtube.com##[page-subtype="home"] ytd-rich-shelf-renderer, [page-subtype="sports"] ytd-rich-shelf-renderer:style(border: none !important)
+www.youtube.com##ytd-rich-grid-media[mini-mode], ytd-rich-section-renderer[mini-mode] #content.ytd-rich-section-renderer:style(max-width: none !important)
+www.youtube.com##ytd-rich-grid-row:style(--ytd-rich-grid-item-margin: 4px; !important)
+www.youtube.com###contents.ytd-rich-shelf-renderer:has(#video-title.ytd-rich-grid-media):style(--ytd-rich-grid-item-margin: 4px; !important)
+www.youtube.com##ytd-thumbnail.ytd-rich-grid-media::before, ytd-playlist-thumbnail.ytd-rich-grid-media::before:style(background: none !important)
+
+! Dark search suggestion box in dark mode
+www.youtube.com##.sbdd_b:style(border: none !important; background: var(--yt-spec-menu-background) !important; box-shadow: 0px 4px 32px 0px var(--yt-spec-static-overlay-background-light) !important)
+www.youtube.com##.sbsb_a, .sbfl_b:style(background: none !important)
+www.youtube.com##.gsfs, .sbpqs_a b, .sbpqs_a, .sbfl_a:hover:style(color: var(--yt-spec-text-primary) !important)
+www.youtube.com##.sbsb_i:style(color: var(--yt-spec-call-to-action) !important)
+www.youtube.com##[dark] .sbqs_c::before, [dark] .sbpqs_a::before:style(filter: invert(100%) !important)
+www.youtube.com##.sbfl_a:style(color: var(--yt-spec-text-secondary) !important)
+www.youtube.com##.sbsb_c.gsfs.sbsb_d:style(background: var(--yt-spec-button-chip-background-hover) !important)
+
+! Remove Next button. I only ever hit this accidentally, losing my place 
+! and my playback buffer >:-[
+www.youtube.com##.ytp-left-controls > .ytp-button.ytp-next-button
+
+! Don't use the obnoxious new bold font for titles, use the old font instead
+www.youtube.com###title h1 yt-formatted-string:style(font-family: Youtube Sans, sans-serif !important; font-weight: 400 !important;)
+www.youtube.com##h3.ytd-playlist-panel-renderer .title .yt-formatted-string:style(font-family: Youtube Sans, sans-serif !important; font-weight: 400 !important;)
+
+! All comments expanded
+www.youtube.com###comment-content ytd-expander[should-use-number-of-lines][collapsed] > #content.ytd-expander:style(--ytd-expander-max-lines: none !important)
+
+! Always expanded video description
+www.youtube.com##ytd-watch-metadata, ytd-expander.ytd-video-secondary-info-renderer tp-yt-paper-button
+www.youtube.com###info-contents.ytd-watch-flexy[hidden], #meta-contents.ytd-watch-flexy[hidden], ytd-structured-description-content-renderer.ytd-video-secondary-info-renderer[hidden]:style(display: block !important)
+www.youtube.com##ytd-expander.ytd-video-secondary-info-renderer:style(margin: 0px !important)
+www.youtube.com##ytd-expander[collapsed] > #content.ytd-expander:style(max-height: none !important)
+www.youtube.com###description.ytd-video-secondary-info-renderer:style(max-width: none !important)
+www.youtube.com##ytd-video-primary-info-renderer:style(padding: 2px 0 0 !important; border: none !important)
+www.youtube.com##ytd-video-secondary-info-renderer:style(border: none !important; padding: 0 !important)
+www.youtube.com##.title.ytd-video-primary-info-renderer:style(margin: 0 0 8px !important)
+www.youtube.com##.super-title.ytd-video-primary-info-renderer:style(color: var(--yt-spec-text-secondary) !important)
+
+! Full video titles
+www.youtube.com##ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media, ytd-rich-grid-slim-media[mini-mode] #video-title.ytd-rich-grid-slim-media, ytd-video-renderer[is-backstage-video] #video-title.ytd-video-renderer, #video-title[class*="ytd"]:style(-webkit-line-clamp: 20 !important; max-height: 44rem !important)
+
+
 ! Suggested for you
 www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:first-child[class=""]>div:not([data-0]):has-text(/^Suggested/):upward([aria-posinset])
 ! Suggested groups
