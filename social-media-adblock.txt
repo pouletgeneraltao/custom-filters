@@ -1,4 +1,9 @@
 ! Title: Social Media Adblock
+! Expires: 3 days
+! Description: Filters for social media
+! Note: cookie notices will not be hidden by this list
+! This filterlist is compatible with uBlock Origin and Adguard.
+! It is recommended to use this list in combination with both Easylist and Easyprivacy and/or the default filterlists that are configured with your adblocker.
 
 ! YouTube: filter out Shorts -- https://letsblock.it/filters/youtube-shorts
 www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]:upward(ytd-guide-entry-renderer)
