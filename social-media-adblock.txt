@@ -1,5 +1,5 @@
 ! Title: Social Media Adblock
-! Expires: 3 days
+! Expires: 7 days
 ! Description: Filters for social media
 ! Note: cookie notices will not be hidden by this list
 ! This filterlist is compatible with uBlock Origin and Adguard.
