@@ -76,6 +76,13 @@ www.youtube.com##.sbsb_c.gsfs.sbsb_d:style(background: var(--yt-spec-button-chip
 ! and my playback buffer >:-[
 www.youtube.com##.ytp-left-controls > .ytp-button.ytp-next-button
 
+! Remove recommendations
+www.youtube.com###secondary
+
+! UI declutter
+www.youtube.com##ytd-notification-topbar-button-renderer.ytd-masthead.style-scope
+www.youtube.com###voice-search-button
+
 ! Don't use the obnoxious new bold font for titles, use the old font instead
 www.youtube.com###title h1 yt-formatted-string:style(font-family: Youtube Sans, sans-serif !important; font-weight: 400 !important;)
 www.youtube.com##h3.ytd-playlist-panel-renderer .title .yt-formatted-string:style(font-family: Youtube Sans, sans-serif !important; font-weight: 400 !important;)
