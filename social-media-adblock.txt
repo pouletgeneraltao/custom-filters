@@ -78,7 +78,7 @@ www.youtube.com##.sbsb_c.gsfs.sbsb_d:style(background: var(--yt-spec-button-chip
 www.youtube.com##.ytp-left-controls > .ytp-button.ytp-next-button
 
 ! Remove recommendations
-www.youtube.com###secondary
+! www.youtube.com###secondary
 
 ! UI declutter
 www.youtube.com##ytd-notification-topbar-button-renderer.ytd-masthead.style-scope
