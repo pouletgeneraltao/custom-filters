@@ -92,15 +92,15 @@ www.youtube.com##h3.ytd-playlist-panel-renderer .title .yt-formatted-string:styl
 www.youtube.com###comment-content ytd-expander[should-use-number-of-lines][collapsed] > #content.ytd-expander:style(--ytd-expander-max-lines: none !important)
 
 ! Always expanded video description
-www.youtube.com##ytd-watch-metadata, ytd-expander.ytd-video-secondary-info-renderer tp-yt-paper-button
-www.youtube.com###info-contents.ytd-watch-flexy[hidden], #meta-contents.ytd-watch-flexy[hidden], ytd-structured-description-content-renderer.ytd-video-secondary-info-renderer[hidden]:style(display: block !important)
-www.youtube.com##ytd-expander.ytd-video-secondary-info-renderer:style(margin: 0px !important)
-www.youtube.com##ytd-expander[collapsed] > #content.ytd-expander:style(max-height: none !important)
-www.youtube.com###description.ytd-video-secondary-info-renderer:style(max-width: none !important)
-www.youtube.com##ytd-video-primary-info-renderer:style(padding: 2px 0 0 !important; border: none !important)
-www.youtube.com##ytd-video-secondary-info-renderer:style(border: none !important; padding: 0 !important)
-www.youtube.com##.title.ytd-video-primary-info-renderer:style(margin: 0 0 8px !important)
-www.youtube.com##.super-title.ytd-video-primary-info-renderer:style(color: var(--yt-spec-text-secondary) !important)
+! www.youtube.com##ytd-watch-metadata, ytd-expander.ytd-video-secondary-info-renderer tp-yt-paper-button
+! www.youtube.com###info-contents.ytd-watch-flexy[hidden], #meta-contents.ytd-watch-flexy[hidden], ytd-structured-description-content-renderer.ytd-video-secondary-info-renderer[hidden]:style(display: block !important)
+! www.youtube.com##ytd-expander.ytd-video-secondary-info-renderer:style(margin: 0px !important)
+! www.youtube.com##ytd-expander[collapsed] > #content.ytd-expander:style(max-height: none !important)
+! www.youtube.com###description.ytd-video-secondary-info-renderer:style(max-width: none !important)
+! www.youtube.com##ytd-video-primary-info-renderer:style(padding: 2px 0 0 !important; border: none !important)
+! www.youtube.com##ytd-video-secondary-info-renderer:style(border: none !important; padding: 0 !important)
+! www.youtube.com##.title.ytd-video-primary-info-renderer:style(margin: 0 0 8px !important)
+! www.youtube.com##.super-title.ytd-video-primary-info-renderer:style(color: var(--yt-spec-text-secondary) !important)
 
 ! Full video titles
 www.youtube.com##ytd-grid-video-renderer #video-title.yt-simple-endpoint.ytd-grid-video-renderer, ytd-rich-grid-media[mini-mode] #video-title.ytd-rich-grid-media, ytd-rich-grid-slim-media[mini-mode] #video-title.ytd-rich-grid-slim-media, ytd-video-renderer[is-backstage-video] #video-title.ytd-video-renderer, #video-title[class*="ytd"]:style(-webkit-line-clamp: 20 !important; max-height: 44rem !important)
