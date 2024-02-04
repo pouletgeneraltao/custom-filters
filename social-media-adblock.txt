@@ -126,10 +126,12 @@ www.youtube.com##ytd-menu-renderer:not([condensed]) #top-level-buttons-computed 
 www.youtube.com##ytd-menu-renderer:not([condensed]) #top-level-buttons-computed ytd-button-renderer:nth-child(2) .yt-spec-button-shape-next__icon, #flexible-item-buttons .yt-spec-button-shape-next__icon:style( margin: 0 !important)
 
 ! Hide YouTube mixes
-www.youtube.com##ytd-thumbnail #thumbnail.ytd-thumbnail[href*="start_radio=1"]:upward(.ytd-rich-item-renderer)
-www.youtube.com##ytd-compact-radio-renderer
-www.youtube.com##ytd-radio-renderer
+youtube.com##ytd-thumbnail #thumbnail.ytd-thumbnail[href*="start_radio=1"]:upward(.ytd-rich-item-renderer)
+youtube.com##ytd-compact-radio-renderer
+youtube.com##ytd-radio-renderer
 
+! Remove already watched videos
+youtube.com##ytd-rich-item-renderer:has(#overlays > ytd-thumbnail-overlay-resume-playback-renderer.ytd-thumbnail)
 
 
 
