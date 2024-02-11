@@ -140,7 +140,8 @@ youtube.com##ytd-rich-item-renderer:has(#overlays > ytd-thumbnail-overlay-resume
 
 
 ! Suggested for you
-www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:first-child[class=""]>div:not([data-0]):has-text(/^Suggested/):upward([aria-posinset])
+!www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:first-child[class=""]>div:not([data-0]):has-text(/^Suggested/):upward([aria-posinset])
+www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:has-text(/Suggested/):upward([aria-posinset])
 ! Suggested groups
 www.facebook.com##[aria-posinset] [aria-label="See more groups"][href="/groups/discover/"]:upward([aria-posinset])
 ! Reels and short videos
