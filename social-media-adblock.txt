@@ -33,7 +33,7 @@ www.youtube.com##ytd-browse ytd-rich-item-renderer:has(ytd-thumbnail-overlay-tim
 www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer ytd-thumbnail-overlay-time-status-renderer[overlay-style="UPCOMING"]:upward(ytd-item-section-renderer)
 
 ! More videos per row
-www.youtube.com##.ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 5 !important)
+www.youtube.com##.ytd-rich-grid-renderer:style(--ytd-rich-grid-items-per-row: 6 !important)
 www.youtube.com###avatar.ytd-rich-grid-media
 www.youtube.com###avatar-link.ytd-rich-grid-media
 www.youtube.com###home-page-skeleton .channel-avatar
