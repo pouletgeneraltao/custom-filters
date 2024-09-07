@@ -5,7 +5,7 @@
 ! This filterlist is compatible with uBlock Origin and Adguard.
 ! It is recommended to use this list in combination with both Easylist and Easyprivacy and/or the default filterlists that are configured with your adblocker.
 
-
+! YOUTUBE
 ! YouTube: filter out Shorts -- https://letsblock.it/filters/youtube-shorts
 www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]:upward(ytd-guide-entry-renderer)
 www.youtube.com##ytd-mini-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33"]:upward(ytd-mini-guide-entry-renderer)
@@ -133,12 +133,7 @@ youtube.com##ytd-radio-renderer
 ! Remove already watched videos
 youtube.com##ytd-rich-item-renderer:has(#overlays > ytd-thumbnail-overlay-resume-playback-renderer.ytd-thumbnail)
 
-
-
-
-
-
-
+! FACEBOOK
 ! Suggested for you
 ! www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:only-child>div:first-child[class=""]>div:not([data-0]):has-text(/^Suggested/):upward([aria-posinset])
 www.facebook.com##[aria-posinset] div:not(:only-child)>div:only-child>div:has-text(/Suggested/):upward([aria-posinset])
@@ -156,12 +151,7 @@ www.facebook.com##.xd4ddsz.x1iyjqo2.xdt5ytf.x78zum5 > .x1xfsgkm.x18d9i69.xqmdsaz
 www.facebook.com##.x139jcc6.x4vbgl9.xcud41i.x1rdy4ex.x1nhvcw1.x1a02dak.x1q0g3np.x78zum5.x8gbvx8 > div:has-text(/Rented/i)
 www.facebook.com##.x139jcc6.x4vbgl9.xcud41i.x1rdy4ex.x1nhvcw1.x1a02dak.x1q0g3np.x78zum5.x8gbvx8 > div:has-text(/Pending/i)
 
-
-
-
-
-
-! Instagram
+! INSTAGRAM
 ! instagram.com##article div:has-text(/Sponsored/i):upward(article > div)
 ! Hide "Suggested for you" posts 
 ! instagram.com##article > div > div > div > div:has(span:has-text(/Suggested for you/i)):upward(article)
@@ -172,13 +162,7 @@ instagram.com##._ac-t
 www.instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xeq5yr9.x1dr59a3.xixxii4.x13vifvy.x1n327nk > div > div > div > div > div.xh8yej3.x1iyjqo2 > div:nth-child(4) > span > div > a
 instagram.com##.x9f619.xjbqb8w.x78zum5.x168nmei.x13lgxp2.x5pf9jr.xo71vjh.x1plvlek.xryxfnj.x1c4vz4f.x2lah0s.xdt5ytf.xqjyukv.x1qjc9v5.x1oa3qoh.x1nhvcw1.xixxii4.xg7h5cd.xh8yej3.x1vjfegm.x1ey2m1c.x80663w.x1jeouym.x6w1myc > div > div > div > div > div > div:nth-child(3) > span > div > a
 
-
-
-
-
-
-
-!reddit
+! REDDIT
 ! www.reddit.com##[style="z-index"]
 
 ! 2023-06-11 https://www.reddit.com
@@ -187,3 +171,17 @@ reddit.com##.Post:has-text(/Similar to/i)
 reddit.com##.Post:has-text(/Popular near you/i)
 reddit.com##.Post:has-text(/Because you\'ve shown interest in/i)
 reddit.com##.Post:has-text(/Popular on Reddit right now/i)
+
+! TWITCH
+! 2023-06-12 https://www.twitch.tv
+www.twitch.tv##div.hjmDKV.Layout-sc-1xcs6mc-0:nth-of-type(6) > .hXjgYR.Layout-sc-1xcs6mc-0
+
+! KIJIJI
+! 2023-06-12 https://www.kijiji.ca
+www.kijiji.ca##div.regular-ad.search-item:has-text(/Dealer/i)
+www.kijiji.ca##div.top-feature.search-item:has-text(/Dealer/i)
+
+! 2023-06-12 https://www.tiktok.com
+www.tiktok.com##.e1gjoq3k0.tiktok-py8jux-DivModalContainer
+www.tiktok.com##.ejkrawn3.tiktok-1iq27y7-DivExpandContainer
+
